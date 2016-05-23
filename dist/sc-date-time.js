@@ -108,7 +108,7 @@
         scope.autosave = false;
         if ((attrs['autosave'] != null) || scDateTimeConfig.autosave) {
           scope.saveUpdateDate = function() {
-            return ngModel.$setViewValue(scope.date);
+            return ngModel.$setViewValue(new Date(scope.date));
           };
           return scope.autosave = true;
         } else {

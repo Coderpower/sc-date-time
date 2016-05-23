@@ -73,7 +73,7 @@ angular.module('scDateTime', [])
 
 		scope.autosave = false
 		if attrs['autosave']? or scDateTimeConfig.autosave
-			scope.saveUpdateDate = () -> ngModel.$setViewValue scope.date
+			scope.saveUpdateDate = () -> ngModel.$setViewValue new Date scope.date
 			scope.autosave = true
 		else
 			saveFn = $parse attrs.onSave
